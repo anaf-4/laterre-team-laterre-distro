@@ -255,6 +255,21 @@
           }
         },
         {
+          "id": "laterre.mods:geckolib-fabric-1.21.4-4.8.5:1",
+          "name": "geckolib-fabric-1.21.4-4.8.5",
+          "type": "FabricMod",
+          "required": {
+            "value": true,
+            "def": true
+          },
+          "artifact": {
+            "size": 628583,
+            "MD5": "e89743bfc76855ed770e7705c671d17e",
+            "url": "https://raw.githubusercontent.com/anaf-4/laterre-team-laterre-distro/main/mods/geckolib-fabric-1.21.4-4.8.5.jar",
+            "path": "geckolib-fabric-1.21.4-4.8.5.jar"
+          }
+        },
+        {
           "id": "laterre.mods:iris-fabric-1.8.8+mc1.21.4:1",
           "name": "Iris Shaders",
           "type": "FabricMod",
