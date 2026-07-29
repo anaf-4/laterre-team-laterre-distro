@@ -105,36 +105,6 @@
           ]
         },
         {
-          "id": "laterre.mods:BendableCuboids-1.0.0+mc1.21.7:1",
-          "name": "Bendable Cuboids",
-          "type": "FabricMod",
-          "required": {
-            "value": true,
-            "def": true
-          },
-          "artifact": {
-            "size": 46907,
-            "MD5": "7e07c9fa4f4f113d98c1b240d0e49f29",
-            "url": "https://raw.githubusercontent.com/anaf-4/laterre-team-laterre-distro/main/mods/BendableCuboids-1.0.0+mc1.21.7.jar",
-            "path": "BendableCuboids-1.0.0+mc1.21.7.jar"
-          }
-        },
-        {
-          "id": "laterre.mods:DebugKeybind-fabric-14.0.1:1",
-          "name": "Debug Keybind",
-          "type": "FabricMod",
-          "required": {
-            "value": true,
-            "def": true
-          },
-          "artifact": {
-            "size": 1894365,
-            "MD5": "a023eabb48b56391a72e76f861ca2a6c",
-            "url": "https://raw.githubusercontent.com/anaf-4/laterre-team-laterre-distro/main/mods/DebugKeybind-fabric-14.0.1.jar",
-            "path": "DebugKeybind-fabric-14.0.1.jar"
-          }
-        },
-        {
           "id": "laterre.mods:WI-Zoom-1.7-MC1.21.4:1",
           "name": "WI Zoom",
           "type": "FabricMod",
