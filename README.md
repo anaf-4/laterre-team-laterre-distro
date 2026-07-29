@@ -95,6 +95,27 @@ npm start          # 우선 실행해서 서버 목록에 LaTerre가 뜨고 모�
 npm run dist:win   # 문제없으면 설치 파일(exe) 빌드
 ```
 
+## ⚠️ ASM/Fabric 필수 라이브러리 누락 오류 (NoClassDefFoundError: org/objectweb/asm/...) 수정
+
+접속 시 `NoClassDefFoundError: org/objectweb/asm/tree/ClassNode` 에러가 났었는데, 원인은 런처 빌드 문제가 아니라 **HeliosLauncher의 코드 구조** 때문이었습니다.
+
+Helios는 Fabric의 최신 profile.json에 있는 `libraries` 목록을 직접 읽어서 classpath를 구성하지 않고, `distribution.json`의 `Fabric` 모듈 밑에 있는 `type: "Library"` subModule들만 읽어서 classpath에 올립니다 (`processbuilder.js`의 `_resolveServerLibraries`). 그래서 ASM, Mixin, Intermediary를 이 안에 직접 선언해야 하는데 처음 버전엔 빠져있었습니다.
+
+**이미 `generate_distribution.py`에 반영해서 고쳤습니다.** ASM 5종 + Sponge Mixin은 Fabric 공식 API 응답에서 가져온 실제 해시값을 코드에 바로 넣어놨고 (네트워크 없이도 항상 정확함), Intermediary만 해시가 API에 없어서 `complete-distribution.js`가 실제 파일을 받아 계산하도록 업데이트했습니다.
+
+**다시 해야 할 것 (딱 이것만):**
+
+```bash
+cd laterre-distribution   # (또는 hanwol-distribution)
+node complete-distribution.js       # intermediary까지 새로 받아서 해시 계산
+python3 generate_distribution.py    # distribution.json 재생성 (ASM/Mixin 라이브러리 포함됨)
+git add .
+git commit -m "fix missing fabric libraries (asm/mixin/intermediary)"
+git push
+```
+
+**런처(exe)를 다시 빌드할 필요는 없습니다.** ASM/Mixin/Intermediary는 GitHub이 아니라 Fabric 공식 서버(`maven.fabricmc.net`)를 직접 가리키게 해놔서 별도 업로드도 필요 없고, `distribution.json`만 GitHub에 새로 push하면 런처가 다음 실행 때 알아서 받아갑니다.
+
 ## 이후 모드를 추가/삭제/업데이트할 때
 
 1. `mods/` 폴더의 jar 파일을 교체(추가/삭제)
