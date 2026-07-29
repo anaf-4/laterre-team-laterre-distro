@@ -17,8 +17,8 @@
           "name": "Fabric Loader 0.19.3",
           "type": "Fabric",
           "artifact": {
-            "size": 0,
-            "MD5": "FILL_ME_RUN_complete-distribution.js",
+            "size": 1976502,
+            "MD5": "881e0e9f53a11b9ad468b47afd678bfd",
             "url": "https://raw.githubusercontent.com/anaf-4/laterre-team-laterre-distro/main/loader/fabric-loader-0.19.3.jar"
           },
           "subModules": [
@@ -27,8 +27,8 @@
               "name": "Fabric 1.21.4 Version Manifest",
               "type": "VersionManifest",
               "artifact": {
-                "size": 0,
-                "MD5": "FILL_ME_RUN_complete-distribution.js",
+                "size": 2862,
+                "MD5": "3705112241a3ac35d3a6dc2aba1b26e2",
                 "url": "https://raw.githubusercontent.com/anaf-4/laterre-team-laterre-distro/main/loader/fabric-loader-0.19.3-1.21.4.json"
               }
             }
