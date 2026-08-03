@@ -210,6 +210,21 @@
           }
         },
         {
+          "id": "laterre.mods:cresc-client-1.0.0:1",
+          "name": "cresc-client-1.0.0",
+          "type": "FabricMod",
+          "required": {
+            "value": true,
+            "def": true
+          },
+          "artifact": {
+            "size": 18243,
+            "MD5": "f854b112349071d68b1b753e740b85d9",
+            "url": "https://raw.githubusercontent.com/anaf-4/laterre-team-laterre-distro/main/mods/cresc-client-1.0.0.jar",
+            "path": "cresc-client-1.0.0.jar"
+          }
+        },
+        {
           "id": "laterre.mods:crhud-client-1.0.0:1",
           "name": "crhud-client-1.0.0",
           "type": "FabricMod",
