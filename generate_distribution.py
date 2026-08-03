@@ -47,6 +47,7 @@ SERVER_ICON_URL = f"{BASE_URL}/icon.png"  # TODO: 서버 아이콘 이미지를 
 DISTRO_VERSION = "1.0.0"
 
 MOD_DIR = os.path.join(os.path.dirname(__file__), "mods")
+SHADERPACK_DIR = os.path.join(os.path.dirname(__file__), "shaderpacks")
 LOADER_INFO_PATH = os.path.join(os.path.dirname(__file__), "loader", "loader-info.json")
 OUT_PATH = os.path.join(os.path.dirname(__file__), "distribution.json")
 
@@ -149,6 +150,36 @@ def build_library_submodules(loader_info: dict):
     return subs
 
 
+def build_shaderpack_modules():
+    # Helios는 shaderpack을 distribution.json으로 직접 관리하지 않고, 그냥
+    # instances/<serverId>/shaderpacks/ 폴더에 있는 .zip 파일을 스캔해서 보여줍니다
+    # (dropinmodutil.js의 scanForShaderpacks). 그래서 type: "File"로 등록해서
+    # 그 경로에 파일을 떨궈주기만 하면, Settings > Mods > Shaderpacks 목록에
+    # 자동으로 뜨고 유저가 선택만 하면 됩니다 (이미 설치된 Iris가 실제로 적용).
+    modules = []
+    if not os.path.isdir(SHADERPACK_DIR):
+        return modules
+    for filename in sorted(os.listdir(SHADERPACK_DIR)):
+        if not filename.endswith(".zip"):
+            continue
+        path = os.path.join(SHADERPACK_DIR, filename)
+        md5, size = md5_and_size(path)
+        stem = filename.rsplit(".", 1)[0]
+        modules.append({
+            "id": f"laterre.shaderpacks:{stem}:1",
+            "name": stem,
+            "type": "File",
+            "required": {"value": True, "def": True},
+            "artifact": {
+                "size": size,
+                "MD5": md5,
+                "url": f"{BASE_URL}/shaderpacks/{filename}",
+                "path": f"shaderpacks/{filename}",
+            },
+        })
+    return modules
+
+
 def build_fabric_module():
     loader_info = {}
     if os.path.exists(LOADER_INFO_PATH):
@@ -195,7 +226,7 @@ def main():
                 "minecraftVersion": MC_VERSION,
                 "mainServer": True,
                 "autoconnect": True,
-                "modules": [build_fabric_module()] + build_mod_modules(),
+                "modules": [build_fabric_module()] + build_mod_modules() + build_shaderpack_modules(),
             }
         ],
     }

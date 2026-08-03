@@ -418,6 +418,21 @@
             "url": "https://raw.githubusercontent.com/anaf-4/laterre-team-laterre-distro/main/mods/xaeroworldmap-fabric-1.21.4-1.44.2.jar",
             "path": "xaeroworldmap-fabric-1.21.4-1.44.2.jar"
           }
+        },
+        {
+          "id": "laterre.shaderpacks:ComplementaryUnbound_r5.1.1:1",
+          "name": "ComplementaryUnbound_r5.1.1",
+          "type": "File",
+          "required": {
+            "value": true,
+            "def": true
+          },
+          "artifact": {
+            "size": 409957,
+            "MD5": "da7fc4c86b12e65f4f70b3a9aaabae90",
+            "url": "https://raw.githubusercontent.com/anaf-4/laterre-team-laterre-distro/main/shaderpacks/ComplementaryUnbound_r5.1.1.zip",
+            "path": "shaderpacks/ComplementaryUnbound_r5.1.1.zip"
+          }
         }
       ]
     }
