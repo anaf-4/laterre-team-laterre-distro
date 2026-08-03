@@ -203,8 +203,8 @@
             "def": true
           },
           "artifact": {
-            "size": 201726,
-            "MD5": "88361f1b5f9c49904a4a56e973c58063",
+            "size": 201482,
+            "MD5": "6be94d9e74fba6640b3a9fa5198b77c8",
             "url": "https://raw.githubusercontent.com/anaf-4/laterre-team-laterre-distro/main/mods/client-0.1.0-SNAPSHOT.jar",
             "path": "client-0.1.0-SNAPSHOT.jar"
           }
