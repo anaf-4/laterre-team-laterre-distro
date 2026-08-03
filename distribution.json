@@ -195,6 +195,21 @@
           }
         },
         {
+          "id": "laterre.mods:client-0.1.0-SNAPSHOT:1",
+          "name": "client-0.1.0-SNAPSHOT",
+          "type": "FabricMod",
+          "required": {
+            "value": true,
+            "def": true
+          },
+          "artifact": {
+            "size": 191195,
+            "MD5": "b2d8e5d3d4643df371287e2917aa78ec",
+            "url": "https://raw.githubusercontent.com/anaf-4/laterre-team-laterre-distro/main/mods/client-0.1.0-SNAPSHOT.jar",
+            "path": "client-0.1.0-SNAPSHOT.jar"
+          }
+        },
+        {
           "id": "laterre.mods:defaultoptions-fabric-1.21.4-21.4.6:1",
           "name": "Default Options",
           "type": "FabricMod",
