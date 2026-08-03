@@ -210,6 +210,21 @@
           }
         },
         {
+          "id": "laterre.mods:crhud-client-1.0.0:1",
+          "name": "crhud-client-1.0.0",
+          "type": "FabricMod",
+          "required": {
+            "value": true,
+            "def": true
+          },
+          "artifact": {
+            "size": 27535,
+            "MD5": "739a511815e2a31e17beae42315b1835",
+            "url": "https://raw.githubusercontent.com/anaf-4/laterre-team-laterre-distro/main/mods/crhud-client-1.0.0.jar",
+            "path": "crhud-client-1.0.0.jar"
+          }
+        },
+        {
           "id": "laterre.mods:defaultoptions-fabric-1.21.4-21.4.6:1",
           "name": "Default Options",
           "type": "FabricMod",
