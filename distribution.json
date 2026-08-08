@@ -233,8 +233,8 @@
             "def": true
           },
           "artifact": {
-            "size": 28449,
-            "MD5": "55654ea24a82405b34a6eef21708d504",
+            "size": 1219948,
+            "MD5": "3df045ee0fbe7c80333730632aca3506",
             "url": "https://raw.githubusercontent.com/anaf-4/laterre-team-laterre-distro/main/mods/crhud-client-1.0.0.jar",
             "path": "crhud-client-1.0.0.jar"
           }
