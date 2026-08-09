@@ -105,6 +105,21 @@
           ]
         },
         {
+          "id": "laterre.mods:CRTradeClient-1.0.0:1",
+          "name": "CRTradeClient-1.0.0",
+          "type": "FabricMod",
+          "required": {
+            "value": true,
+            "def": true
+          },
+          "artifact": {
+            "size": 2276156,
+            "MD5": "dd13129fcb9091d563b677a827fbd361",
+            "url": "https://raw.githubusercontent.com/anaf-4/laterre-team-laterre-distro/main/mods/CRTradeClient-1.0.0.jar",
+            "path": "CRTradeClient-1.0.0.jar"
+          }
+        },
+        {
           "id": "laterre.mods:WI-Zoom-1.7-MC1.21.4:1",
           "name": "WI Zoom",
           "type": "FabricMod",
