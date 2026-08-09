@@ -113,8 +113,8 @@
             "def": true
           },
           "artifact": {
-            "size": 2276179,
-            "MD5": "c6180efbcc6bbd442d4263efc97c2a06",
+            "size": 2275524,
+            "MD5": "16621bdf6af3795456146dc5b8931957",
             "url": "https://raw.githubusercontent.com/anaf-4/laterre-team-laterre-distro/main/mods/CRTradeClient-1.0.0.jar",
             "path": "CRTradeClient-1.0.0.jar"
           }
