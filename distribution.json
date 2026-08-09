@@ -233,8 +233,8 @@
             "def": true
           },
           "artifact": {
-            "size": 3843092,
-            "MD5": "cb380eb0f9bf41fb3ba151f6fea0f301",
+            "size": 3843727,
+            "MD5": "aae0b66fc39c016a9e67824e93b52948",
             "url": "https://raw.githubusercontent.com/anaf-4/laterre-team-laterre-distro/main/mods/cresc-client-1.0.0.jar",
             "path": "cresc-client-1.0.0.jar"
           }
